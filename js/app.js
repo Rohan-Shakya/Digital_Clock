@@ -13,6 +13,7 @@ function clock(){
     // AM and PM format editor
     if(hours == 0){
         hours = 12;
+        session = "AM";
     }
     if(hours > 12){
         hours = hours - 12;
