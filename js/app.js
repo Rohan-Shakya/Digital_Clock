@@ -2,12 +2,15 @@
 function clock(){
     
     const fullDate = new Date();
+
+    // Assigned to corresponding Variable
     var days = fullDate.getDay();
     var hours = fullDate.getHours();
     var mins = fullDate.getMinutes();
     var secs = fullDate.getSeconds();
     var session = "AM";
-
+ 
+    // AM and PM format editor
     if(hours == 0){
         hours = 12;
     }
@@ -15,7 +18,11 @@ function clock(){
         hours = hours - 12;
         session = "PM";
     }
+    if(hours == 12){
+        period = "PM";
+    }
 
+    // To keep  0 infront of single digit number
     if(hours < 10){
         hours = "0" + hours;
     }
@@ -26,7 +33,7 @@ function clock(){
         secs = "0"+ secs;
     }
     
-    
+    // Array number to days
     switch(days){
         case 0: 
                 days = "Sun";
@@ -53,7 +60,7 @@ function clock(){
     };
 
 
-    
+    // Assigning value to corresponding IDs
     document.querySelector("#days").innerHTML = days;
     document.querySelector("#hour").innerHTML = hours;
     document.querySelector("#minute").innerHTML = mins;
