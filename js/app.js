@@ -19,7 +19,7 @@ function clock(){
         session = "PM";
     }
     if(hours == 12){
-        period = "PM";
+        session = "PM";
     }
 
     // To keep  0 infront of single digit number
