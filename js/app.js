@@ -55,7 +55,7 @@ function clock(){
                 days = "Fri";
                 break;
         case 6: 
-                days = "Fri";
+                days = "Sat";
                 break;
                 
     };
