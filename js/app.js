@@ -11,15 +11,15 @@ function clock(){
     var session = "AM";
  
     // AM and PM format editor
+    if(hours == 12){
+        session = "PM";
+    }
     if(hours == 0){
         hours = 12;
         session = "AM";
     }
     if(hours > 12){
         hours = hours - 12;
-        session = "PM";
-    }
-    if(hours == 12){
         session = "PM";
     }
 
