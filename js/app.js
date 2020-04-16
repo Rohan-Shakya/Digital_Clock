@@ -1,26 +1,22 @@
-
 function clock(){
     
     const fullDate = new Date();
-
     // Assigned to corresponding Variable
     var days = fullDate.getDay();
     var hours = fullDate.getHours();
     var mins = fullDate.getMinutes();
     var secs = fullDate.getSeconds();
-    var session = "AM";
+    var format = "AM";
  
     // AM and PM format editor
-    if(hours == 12){
-        session = "PM";
+    if(hours >= 12){
+        format = "PM";
     }
     if(hours == 0){
         hours = 12;
-        session = "AM";
     }
     if(hours > 12){
         hours = hours - 12;
-        session = "PM";
     }
 
     // To keep  0 infront of single digit number
@@ -66,7 +62,7 @@ function clock(){
     document.querySelector("#hour").innerHTML = hours;
     document.querySelector("#minute").innerHTML = mins;
     document.querySelector("#second").innerHTML = secs;
-    document.querySelector("#session").innerHTML = session;
+    document.querySelector("#format").innerHTML = format;
 
     
 }
